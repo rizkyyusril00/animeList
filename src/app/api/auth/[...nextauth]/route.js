@@ -13,4 +13,7 @@ export const authOptions = {
 
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST };
+// export { handler as GET, handler as POST };
+// Next.js app router API route expects `GET` and `POST` handlers as separate functions
+export const GET = handler;
+export const POST = handler;
