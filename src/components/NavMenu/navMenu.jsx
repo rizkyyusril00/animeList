@@ -4,7 +4,6 @@ import {authUserSession} from "../../libs/auth-libs";
 
 export default async function NavMenu() {
     const user = await authUserSession();
-    console.log(user);
 
     const navMenus = () => {
         if (user) {
