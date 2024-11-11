@@ -1,6 +1,6 @@
-import { getAnimeResponse } from "@/app/libs/api-libs";
-import CardAnime from "@/components/Card/cardAnime";
-import Header from "@/components/Header/header";
+import { getAnimeResponse } from "../../../libs/api-libs";
+import CardAnime from "../../../components/Card/cardAnime";
+import Header from "../../../components/Header/header";
 
 export default async function SearchAnime({ params }) {
     const keyword = params.searchAnime;

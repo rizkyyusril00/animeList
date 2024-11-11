@@ -11,7 +11,7 @@ export default function SearchInput() {
     const handeleSearch = (event) => {
         const keyword = searchRef.current.value;
 
-        if (!keyword) return;
+        if (!keyword || keyword.trim() === "" || keyword.trim() === ",") return;
 
         if (event.key === "Enter" || event.type === "click") {
             event.preventDefault();
@@ -28,11 +28,11 @@ export default function SearchInput() {
                 id=""
                 ref={searchRef}
                 onKeyDown={handeleSearch}
-                className="py-2 pl-2 pr-10 focus:outline-none rounded-md bg-acent text-tertiary"
+                className="py-2 pl-2 pr-10 focus:outline-none rounded-md bg-acent text-secondary"
                 />
                 <MagnifyingGlass
                 size={24}
-                className="text-tertiary absolute top-2 right-2 cursor-pointer"
+                className="text-secondary absolute top-2 right-2 cursor-pointer"
                 onClick={handeleSearch}
                 />
             </div>

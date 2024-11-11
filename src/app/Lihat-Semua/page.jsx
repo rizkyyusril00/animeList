@@ -1,9 +1,10 @@
 "use client";
-import CardAnime from "@/components/Card/cardAnime";
-import Header from "@/components/Header/header";
-import Pagination from "@/components/Pagination/pagination";
+import CardAnime from "../../components/Card/cardAnime";
+import Header from "../../components/Header/header";
+import Pagination from "../../components/Pagination/pagination";
 import { useEffect, useState } from "react";
-import { getAnimeResponse } from "../libs/api-libs";
+import { getAnimeResponse } from "../../libs/api-libs";
+
 
 export default async function LihatSemuaPage() {
     const [page, setPage] = useState(1);
@@ -24,7 +25,7 @@ export default async function LihatSemuaPage() {
         <>
             <div className="pt-[80px] p-4">
                 <div className="flex flex-col gap-4">
-                    <Header title={`Top Anime`} visibility={false} />
+                    <Header title={`All Animes`} visibility={false} />
                     <div className="grid grid-cols-4 gap-4">
                         <CardAnime api={allAnimes} />
                     </div>

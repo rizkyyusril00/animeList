@@ -1,7 +1,7 @@
 export default function BadgeDetailAnime({ detail }) {
     return (
         <>
-        <span>{detail}</span>
+            <span className="text-acent">{detail}</span>
         </>
     );
 }

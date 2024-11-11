@@ -3,8 +3,8 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname:  "",
-            }
+                hostname:  "avatars.githubusercontent.com",
+            },
         ]
     }
 };
