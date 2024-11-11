@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import GithubAuth from "next-auth/providers/github";
 
+// Define authOptions object
 export const authOptions = {
     providers: [
         GithubAuth({
@@ -9,11 +10,10 @@ export const authOptions = {
         })
     ],
     secret: process.env.NEXTAUTH_SECRET
-}
+};
 
+// Default handler for NextAuth
 const handler = NextAuth(authOptions);
 
-// export { handler as GET, handler as POST };
-// Next.js app router API route expects `GET` and `POST` handlers as separate functions
-export const GET = (req, res) => NextAuth(req, res, authOptions);
-export const POST = (req, res) => NextAuth(req, res, authOptions);
+// Export as GET and POST for the Next.js API route
+export { handler as GET, handler as POST };
