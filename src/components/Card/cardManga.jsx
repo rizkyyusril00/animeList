@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-export default function CardAnime({ api }) {
+export default function CardManga({ api }) {
   return (
     <>
       {api.data?.map((data) => (
         <Link
           key={data.mal_id}
-          href={`/detail-anime/${data.mal_id}`}
+          href={`/detail-manga/${data.mal_id}`}
           className="shadow-lg bg-acent rounded-md pb-1"
         >
           <figure className="group bg-acent overflow-hidden rounded-md">
