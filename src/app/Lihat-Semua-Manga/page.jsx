@@ -4,7 +4,7 @@ import Header from "../../components/Header/header";
 import Pagination from "../../components/Pagination/pagination";
 import { useEffect, useState } from "react";
 import { getAnimeResponse } from "../../libs/api-libs";
-import CardManga from "@/components/Card/cardManga";
+import CardManga from "../../components/Card/cardManga";
 
 export default async function LihatSemuaPage() {
   const [page, setPage] = useState(1);
