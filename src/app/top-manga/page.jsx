@@ -1,10 +1,10 @@
-import CardManga from "@/components/Card/cardManga";
-import Header from "@/components/Header/header";
+import CardManga from "../../components/Card/cardManga";
+import Header from "../../components/Header/header";
 import {
   getAnimeResponse,
   getNestedAnimeResponse,
   produceNumber,
-} from "@/libs/api-libs";
+} from "../../libs/api-libs";
 
 export default async function TopManga() {
   const topMangas = await getAnimeResponse("top/manga", "limit=8");
